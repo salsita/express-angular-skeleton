@@ -1,0 +1,32 @@
+---
+title: 'Internal Projects'
+order: 3
+---
+
+extends ../../../templates/standard
+
+block content
+  :markdown
+    __Internal Projects__
+
+    Stuff we built for ourselves.
+
+
+    __The First Extensible Browser for iPhone__
+
+    About a year ago, a number of our browser extension clients started asking about mobile. Unfortunately there is virtually no browser extension support on Android and none at all on iOS. So we did the obvious thing: we wrote our own browser.
+
+    Kitt is a full-featured iPhone browser (iPad and Android planned) that supports a healthy subset of the Chrome extension API. Addon vendors can now offer an attractive mobile solution to their users with minimal porting effort of their existing Chrome addons.
+
+    For more information, visit the Kitt website.
+
+
+    __A Single Codebase for Chrome, Internet Explorer and Firefox Using the Chrome Extension Framework__
+
+    Ancho is a unique technology developed by Salsita that enables Chrome extensions to run, unmodified, in Internet Explorer and Firefox.
+
+    Due to their inherent incompatibilities, developing and maintaining an extension for multiple browser can be a nightmare. A few cross-browser frameworks exists, but they offer limited functionality and lock you into a proprietary API. With Ancho you just write your Chrome extension normally and get IE and Firefox support for free*. The best part is that there’s no need to port your changes when you update the Chrome version with a new feature or bug fix.
+
+    Visit the Ancho website for documentation and licensing information.
+
+    <sup><sub>*We support a growing subset of the full Chrome extension API.</sub></sup>

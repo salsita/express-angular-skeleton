@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This file can be an arbitrary executable that takes care of installing all the
+# dependencies your application may need. It should take care of installing
+# things that do not fit into Dockerfile for some reason.
+
+set -e
+set -x
+
+# Client dependencies.
+cd ../code/client
+npm install
+# `--allow-root` - Stupid but seems necessary (this is running as root).
+bower install --allow-root
+
+# Server dependencies.
+cd ../../code/server
+npm install

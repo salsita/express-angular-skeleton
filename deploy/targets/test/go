@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Run your tests here. This script shall exit with a non-zero exit status to
+# signal that the whole build has failed.
+
+set -e
+set -x
+
+if [ -z PHANTOMJS_BIN ]; then
+    export PHANTOMJS_BIN=/usr/local/bin/phantomjs
+fi;
+
+cd ../code/client
+grunt test --debug --verbose
+
+
+cd ../server
+grunt test:jenkins --debug --verbose

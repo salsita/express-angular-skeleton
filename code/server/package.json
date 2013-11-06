@@ -1,0 +1,31 @@
+{
+  "name": "salsita-website",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "=3.2.6",
+    "config": "=0.4.18",
+    "jade": "*",
+    "coffee-script": "~1.4",
+    "underscore": "~1.5.1",
+    "express-namespace": "~0.1.1",
+    "superagent": "~0.15.4",
+    "winston": "~0.7.2",
+    "grunt-coffeelint": "0.0.7"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-express-server": "~0.4.3",
+    "grunt-mocha": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "sinon": "~1.7.3",
+    "chai": "~1.8.1",
+    "sinon-chai": "~2.4.0",
+    "supertest": "~0.8.1",
+    "nock": "~0.22.1",
+    "xunit-file": "0.0.4",
+    "grunt-env": "~0.4.0",
+    "mocha": "~1.13.0"
+  }
+}

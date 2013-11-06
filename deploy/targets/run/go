@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+set -x
+
+export PROJECT_ROOT=/srv/project
+export LOG_ROOT=/data/log
+
+# Make sure log dir exists.
+mkdir -p ${LOG_ROOT}
+
+# Start all necessary processes with Supervisord.
+# Stay in foreground unless DAEMONIZE == 1.
+supervisord -c ./targets/run/supervisord.conf -n &
+
+# Run the node server.
+cd ${PROJECT_ROOT}/code/server
+
+# Please note **this has to be run in foreground** so that Docker's binds
+# to this process.
+coffee app.coffee \
+    > ${LOG_ROOT}/node.stdout.log \
+    2>${LOG_ROOT}/node.stderr.log

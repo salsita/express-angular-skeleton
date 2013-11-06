@@ -1,0 +1,262 @@
+/* ==========================================================================
+   Web Font
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(//themes.googleusercontent.com/static/fonts/quicksand/v2/sKd0EMYPAh5PYCRKSryvWz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(//themes.googleusercontent.com/static/fonts/quicksand/v2/32nyIRHyCu6iqEka_hbKsnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@mediaDesktopSmallWidth: 1200px;
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+@siteMaxWidth: 1600px;
+@font: 'Quicksand', sans-serif;
+@contentMaxWidth: 800px;
+@paddingStandard: 20px;
+@navMainHeight: 60px;
+@navSectionWidth: 200px;
+@navSectionItemHeight: 30px;
+@contentMarginBottom: 40px;
+@buttonHeight: 40px;
+@formElementHeight: 40px;
+@metroLineSize: 2px;
+@metroBorderRadius: 20px;
+@metroLineBumper: 30px;
+@contentIconSize: 100px;
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+@colorAlmostWhite: #fafafa;
+.colorAlmostWhiteRGBA(@alpha: 0.25) {
+  background-color: rgba(250,250,250,@alpha);
+}
+@colorAlmostBlack: #222;
+@colorMildGrey: #eee;
+@colorTextGrey: #777;
+@colorMetroSubsectionLine: #ccc;
+@colorSalsitaRed: #e83535;
+@colorMetroLine: #ddd;
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+@metroAnimationDelay: 2s;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+.quirks-box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.pseudoelement {
+  content: "";
+  display: block;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.abs-fill(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.transition(@property: all, @length: 0.5s, @easing: ease-in-out) {
+  transition: @arguments;
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -o-transition: @arguments;
+}
+
+.animate(@name, @duration, @delay: 0s) {
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-delay: @delay;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: @name;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: @delay;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: @name;
+  -moz-animation-duration: @duration;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: @delay;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-name: @name;
+  -ms-animation-duration: @duration;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-direction: normal;
+  -ms-animation-delay: @delay;
+  -ms-animation-play-state: running;
+  -ms-animation-fill-mode: forwards;
+}
+
+.transform(@arguments) {
+  transform: @arguments;
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -ms-transform: @arguments;
+}
+
+.transform-origin(@arguments) {
+  transform-origin: @arguments;
+  -ms-transform-origin: @arguments;
+  -webkit-transform-origin: @arguments;
+  -moz-transform-origin: @arguments;
+}
+
+.perspective(@size) {
+  perspective: @size;
+  -webkit-perspective: @size;
+}
+
+.box-shadow(@x: 0, @y: 2px, @size: 4px, @color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
+.border-radius(@size: 3px) {
+  border-radius: @size;
+  -webkit-border-radius: @size;
+  -moz-border-radius: @size;
+}
+
+.rotate(@deg: 90deg) {
+  transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+}
+
+.truncate(@max-width: 100%) {
+  max-width: @max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vcenter-context {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  padding: 0;
+}
+
+.vcenter-fontfix {
+  font-size: 0;
+}
+
+.vcentered {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.select-disable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Gradients
+   ========================================================================== */
+
+.gradientSiteBackground {
+  background: rgb(223,223,223);
+  background: -moz-linear-gradient(top, rgba(223,223,223,1) 0%, rgba(250,250,250,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(223,223,223,1)), color-stop(100%,rgba(250,250,250,1)));
+  background: -webkit-linear-gradient(top, rgba(223,223,223,1) 0%,rgba(250,250,250,1) 100%);
+  background: -o-linear-gradient(top, rgba(223,223,223,1) 0%,rgba(250,250,250,1) 100%);
+  background: -ms-linear-gradient(top, rgba(223,223,223,1) 0%,rgba(250,250,250,1) 100%);
+  background: linear-gradient(to bottom, rgba(223,223,223,1) 0%,rgba(250,250,250,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdfdf', endColorstr='#fafafa',GradientType=0 );
+}
+
+.gradientDropdown {
+  background: rgb(237,237,237);
+  background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(230,230,229,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(230,230,229,1) 100%);
+  background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(230,230,229,1) 100%);
+  background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(230,230,229,1) 100%);
+  background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(230,230,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#e5e6e6',GradientType=0 );
+
+}
+
+.gradientHeadingFade {
+  background: -moz-linear-gradient(top, rgba(250,250,250,0) 0%, rgba(250,250,250,0) 1%, rgba(250,250,250,0) 50%, rgba(250,250,250,1) 51%, rgba(250,250,250,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,250,250,0)), color-stop(1%,rgba(250,250,250,0)), color-stop(50%,rgba(250,250,250,0)), color-stop(51%,rgba(250,250,250,1)), color-stop(100%,rgba(250,250,250,1)));
+  background: -webkit-linear-gradient(top, rgba(250,250,250,0) 0%,rgba(250,250,250,0) 1%,rgba(250,250,250,0) 50%,rgba(250,250,250,1) 51%,rgba(250,250,250,1) 100%);
+  background: -o-linear-gradient(top, rgba(250,250,250,0) 0%,rgba(250,250,250,0) 1%,rgba(250,250,250,0) 50%,rgba(250,250,250,1) 51%,rgba(250,250,250,1) 100%);
+  background: -ms-linear-gradient(top, rgba(250,250,250,0) 0%,rgba(250,250,250,0) 1%,rgba(250,250,250,0) 50%,rgba(250,250,250,1) 51%,rgba(250,250,250,1) 100%);
+  background: linear-gradient(to bottom, rgba(250,250,250,0) 0%,rgba(250,250,250,0) 1%,rgba(250,250,250,0) 50%,rgba(250,250,250,1) 51%,rgba(250,250,250,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fafafa', endColorstr='#fafafa',GradientType=0 );
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+
+@-webkit-keyframes testanim {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}

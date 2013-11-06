@@ -1,0 +1,10 @@
+*.sw*
+*~
+build/
+bin/
+node_modules/
+vendor/
+
+test-results.xml
+src/app/sitemap.coffee
+*.pyc

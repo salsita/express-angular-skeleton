@@ -1,0 +1,5 @@
+node_modules
+config/runtime.json
+forever
+test-results*.xml
+config/.tern-port
