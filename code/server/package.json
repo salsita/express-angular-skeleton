@@ -2,6 +2,10 @@
   "name": "salsita-website",
   "version": "0.0.1",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salsita/express-angular-skeleton"
+  },
   "dependencies": {
     "express": "=3.2.6",
     "config": "=0.4.18",

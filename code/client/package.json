@@ -2,7 +2,8 @@
   "author": "Salsita, s.r.o., Internal Affairs Dpt.",
   "name": "salsitasoft-skeleton",
   "version": "0.0.1",
-  "homepage": "http://www.salsitasoft.com",
+  "homepage": "",
+  "private": true,
   "licenses": {
     "type": "MIT"
   },
