@@ -1,4 +1,4 @@
-# Salsita Sofware, s.r.o., Website
+# Salsita Sofware, s.r.o., Express & Angular Skeleton
 
 ## FAQ
 
