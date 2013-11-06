@@ -11,7 +11,6 @@ module.exports = (grunt) ->
       dev:
         options:
           script: path.join __dirname, 'app.coffee'
-          node_env: 'dev'
 
     coffeelint:
       files: ['**/*.coffee', '!node_modules/**']
