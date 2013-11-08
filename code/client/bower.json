@@ -10,7 +10,8 @@
     "sinon": "http://sinonjs.org/releases/sinon-1.7.3.js",
     "chai": "~1.7.2",
     "sinon-chai": "~2.4.0",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "angular-ui-router": "~0.2.0"
   },
   "dependencies": {
     "loglevel": "~0.4.0"
