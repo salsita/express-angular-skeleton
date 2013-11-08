@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="salsitasoft">
+<html ng-app="salsitasoft" ng-controller="AppCtrl">
   <head>
     <base href="<%= base_url %>" />
     <meta charset="utf-8">
@@ -15,9 +15,7 @@
 
   </head>
   <body>
-    <section id='view-main'>
-    </section>
-    <nav id='nav-main'></nav>
+    <div class="container" ui-view></div>
 
     <footer class="footer">
       <%= version %>

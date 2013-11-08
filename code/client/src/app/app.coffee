@@ -7,8 +7,13 @@ angular.module('salsitasoft', [
   'ui.router'
 
   # Add your modules here
+  'ngBoilerplate.home'
 ])
 
 .config ($urlRouterProvider , $locationProvider) ->
   $locationProvider.html5Mode(true)
   $urlRouterProvider.otherwise '/home'
+
+
+.controller 'AppCtrl', ($scope, $location) ->
+  console.log 'AppCtrl'
